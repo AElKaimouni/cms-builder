@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "outDir": "./",
+        "target": "es6",
+        "module": "CommonJS",
+        "esModuleInterop" : true
+    },
+    "exclude": ["node_modules", "dashboard", "interface"],
+    "include": ["index.ts"]
+}

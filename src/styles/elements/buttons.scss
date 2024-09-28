@@ -1,0 +1,72 @@
+.app-button {
+    position: relative;
+    padding: .5em 1em;
+    margin: .5em;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    background: #eff2f4;
+    color: #777;
+    font-size: 1em;
+    cursor: pointer;
+    text-transform: capitalize;
+    &:hover {
+        background: lighten(#e9ecee, 5);
+    }
+    &:active {
+        transform: scale(.95);
+    }
+    &.icon {
+        display: flex;
+        align-items: center;
+        padding: .5em;
+        svg {
+            fill: #aaa
+        }
+    }
+    &.danger {
+        background: $DangerColor;
+        color: #eee;
+        svg {
+            fill: #eee
+        }
+        &:hover {
+            background: lighten($DangerColor, 10);
+        }
+    }
+    &.primary {
+        background: $PrimaryColor;
+        color: #eee;
+        svg {
+            fill: #eee
+        }
+        &:hover {
+            background: lighten($PrimaryColor, 10);
+        }
+    }
+    &.success {
+        background: $SuccessColor;
+        color: #eee;
+        svg {
+            fill: #eee
+        }
+        &:hover {
+            background: lighten($SuccessColor, 10);
+        }
+    }
+    &.x2 {
+        font-size: 1.25em;
+    }
+
+    &:disabled {
+        background: #ddd !important;
+        cursor: not-allowed;
+        color: #ccc;
+        svg {
+            fill: #ccc
+        }
+        &:active {
+            transform: scale(1);
+        }
+    }
+}

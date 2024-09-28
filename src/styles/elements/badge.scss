@@ -1,0 +1,20 @@
+.badge {
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 3px;
+
+    border: 1px solid lighten($PrimaryColor, 20);
+    background: lighten($PrimaryColor, 35);
+    color: $PrimaryColor;
+
+    &.success {
+        border: 1px solid lighten($SuccessColor, 20);
+        background: lighten($SuccessColor, 35);
+        color: $SuccessColor;
+    }
+    &.danger {
+        border: 1px solid lighten($DangerColor, 20);
+        background: lighten($DangerColor, 35);
+        color: $DangerColor;
+    }
+}

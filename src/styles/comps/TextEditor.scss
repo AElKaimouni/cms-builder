@@ -1,0 +1,10 @@
+.text-editor {
+    border: 1px solid $borderColor;
+    background: #fff;
+}
+
+.text-editor-toolbar {
+    margin-bottom: 0;
+    border-bottom: 0;
+    border-color: $borderColor;
+}

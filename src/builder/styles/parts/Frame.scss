@@ -1,0 +1,139 @@
+#__Builder-Preview-Container {
+    position: relative;
+    flex-grow: 1;
+    background: #f7f7f7f7;
+    &.__Builder-FullScreen {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        z-index: 100;
+        left: 0;
+    }
+}
+
+#__Builder-Preview {
+    position: absolute;
+    overflow: hidden;
+    font-size: 1rem;
+    height: 100%;
+    transform-origin: left top;
+    transform: scale(1) translateX(-50%);
+    left: 50%;
+    top: 0;
+    background: #fff;
+    width: 100%;
+}
+
+#__Builder-Preview-Frame {
+    width: 100%;
+    height: 100%;
+    border: solid $BorderColor $BorderSize;
+    border-bottom: none;
+    border-top: none;
+}
+
+#__Builder-Preview-Tols-Container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+#__Builder-Preview-Tols {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    pointer-events: none;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+
+}
+
+.__Builder-Frame-Tool {
+    position: relative;
+    border-color: $PrimaryColor !important;
+    border-width: $FrameBorderSize !important;
+    &.__Builder-Grap-Mode {
+        border-color: $GrapColor !important;
+    }
+    &.__Builder-Outline {
+        outline: solid $FrameBorderSize $PrimaryColor;
+    }
+}
+
+.__Builder-Frame-Btns, .__Builder-Frame-Tool-Name {
+    position: absolute;
+    right: 0;
+    transform: translateY(-100%);
+    top: -.25em;
+    &.__Builder-Bottom {
+        top: calc(100% + .25em);
+        transform: translateY(0);
+    }
+}
+
+.__Builder-Frame-Btns {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.__Builder-Frame-Tool-Name {
+    left: -2px;
+    top: 0;
+    &.__Builder-Top {
+        top: 0;
+    }
+    > div {
+        display: inline-flex;
+        align-items: center;
+        background: $PrimaryColor !important;
+        font-size: .85em;
+        margin: .5em;
+        margin-left: 0;
+        border-radius: .25em !important;
+        color: #eee;
+        pointer-events: all;
+        padding: .25em;
+        border-radius: .125em;
+        text-transform: capitalize;
+        border-bottom-left-radius: 0;
+        svg {
+            fill: #eee
+        };
+    }
+}
+
+.__Builder-Frame-Btn {
+    background: $PrimaryColor !important;
+    font-size: .75em;
+    margin: .125em;
+    cursor: pointer;
+    pointer-events: all;
+    padding: .4em !important;
+    border-radius: .5em !important;
+    &:hover {
+        background: lighten($PrimaryColor, 10);
+    }
+    svg {
+        fill: #eee;
+        width: 1.2em;
+        height: 1.2em,
+    };
+}
+
+#frame-loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, .75);
+    z-index: 8;
+}

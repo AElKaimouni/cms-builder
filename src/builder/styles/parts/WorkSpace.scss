@@ -1,0 +1,45 @@
+#__Builder-Work-Space {
+    display: flex;
+    flex-grow: 1;
+    align-items: stretch;
+    height: auto;
+    > * {
+        height: auto;
+        display: flex;
+    }
+}
+
+#__Builder-Left-Area {
+    max-width: $LeftAreaWidth;
+    min-width: $LeftAreaWidth;
+    border-right: $BorderSize $BorderColor solid;
+}
+
+#__Builder-Right-Area {
+    max-width: $RightAreaWidth;
+    min-width: $RightAreaWidth;
+    border-left: $BorderSize $BorderColor solid;
+}
+
+#__Builder-Middle-Area {
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+#__Builder-Left-Area-Panels {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    > .__Builder-Panel-Cnt {
+        flex-grow: 1;
+    }
+    > .__Builder-Menu-Header {
+        .__Builder-Menu-Header-Item {
+            padding: .5em;
+        }
+        svg {
+            width: 1.5em;
+            height: 1.5em;
+        }
+    }
+}

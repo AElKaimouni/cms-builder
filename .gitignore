@@ -1,0 +1,13 @@
+/node_modules
+/uploads
+/index.js
+.env
+dashboard/node_modules
+dashboard/package-lock.json
+dashboard/.env
+dashboard/build
+interface/.next
+interface/out
+build/
+.next
+config/data/revalidates.config.json

@@ -1,0 +1,46 @@
+#model-picker-modal {
+    .Modal-Header {
+        padding: 0.25em 1em;
+    }
+    .modal-picker-models {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-gap: 1rem;
+        min-width: 50vw;
+    }
+    .model-picker-table-item {
+        object-fit: contain;
+        display: flex;
+        justify-content: center;
+    }
+    .Modal-Footer {
+        justify-content: start;
+    }
+
+}
+
+#model-picker-modal-footer-left {
+    flex-grow: 1;
+}
+
+.model-picker-modal-header {
+    display: flex;
+    align-items: center;
+}
+
+.model-picker-modal-search {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.model-picker-modal-filters {
+    display: flex;
+}
+
+.model-picker-modal-filter-item {
+    margin: 0 .5em;
+    label {
+        font-size: .85em;
+    }
+}

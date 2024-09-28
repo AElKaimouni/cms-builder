@@ -1,0 +1,10 @@
+{
+    "locales": [
+        {
+            "name": "English",
+            "ext": "en",
+            "id": "en"
+        }
+    ],
+    "defaultLocale": "en"
+}

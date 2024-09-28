@@ -1,0 +1,101 @@
+.__Builder-Upload-Modal {
+    .__Builder-Modal-Footer {
+        display: flex;
+        justify-content: flex-end;
+        button {
+            font-size: 1em;
+            margin: .25em;
+            &:last-of-type {
+                background: $PrimaryColor !important;
+                color: #eee !important;
+            }
+        }
+    }
+    > .__Builder-Modal-Container{
+        min-width: 40vw;
+        min-height: 40vh;
+    }
+    .__Builder-Upload-Modal-Menu {
+        display: flex;
+        > div {
+            flex-grow: 1;
+            text-align: center;
+            padding: 1em;
+            background: #e5e5e5;
+            border-bottom: $BorderColor $BorderSize solid;
+            &:first-of-type {
+                border-right: $BorderColor $BorderSize solid;
+            }
+            &.__Builder-Active {
+                background: #f0f0f0;
+                border-bottom: none;
+            }
+        }
+    }
+    .__Builder-Upload-Modal-Content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        > div {
+            flex-grow: 1;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+    .__Builder-Upload-Modal-DropZone {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        cursor: pointer;
+        flex-direction: column;
+        > div {
+            width: 100%;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        svg {
+            width: 3em;
+            height: 3em;
+        }
+        h4 {
+            margin: 0;
+        }
+    }
+    .__Builder-Modal-Body {
+        display: flex;
+        flex-direction: column;
+    }
+    .__Builder-Upload-Modal-Link-Content {
+        padding: 1em;
+    }
+    .__Builder-Upload-Modal-List {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .__Builder-Upload-Modal-Header {
+        display: flex;
+        padding: 1em;
+        align-content: center;
+        > div:first-of-type {
+            flex-grow: 1;
+            margin: 0;
+        }
+        > div {
+            display: flex;
+            align-items: center;
+        }
+        button {
+            background: $PrimaryColor !important;
+            color: #eee !important;
+            padding: .5em 1em !important;
+            font-size: 1em;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.__Builder-CompCard {
+    padding: 1em;
+    margin: 1em;
+    text-align: center;
+    border-radius: .5em;
+    background: #f3f3f3;
+    color: #333;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: calc(100% - 4em);
+    font-size: .9em;
+    cursor: grab;
+    &:hover {
+        background: #f0f0f0;
+    }
+    &.__Builder-Drag-Object {
+        min-width: 100px;
+        max-width: 100px;
+        padding: 1em !important;
+        position: fixed;
+        display: none;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        opacity: .85;
+        z-index: 110;
+        &.__Builder-Active {
+            display: inline-flex;
+        }
+    }
+    svg {
+        margin: .5em 0;
+        font-size: 2em;
+        display: block;
+    }
+    &.__Builder_Clickable {
+        cursor: pointer;
+    }
+}

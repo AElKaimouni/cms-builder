@@ -1,0 +1,45 @@
+.model-Boolean-input {
+    display: inline-flex !important;
+    input[type=checkbox]{
+        height: 0;
+        width: 0;
+        visibility: hidden;
+    }
+        
+    .model-Boolean-input-Label {
+        cursor: pointer;
+        text-indent: -9999px;
+        width: 3em;
+        height: 1.5em;
+        background: grey;
+        display: block;
+        border-radius: 1.5em;
+        position: relative;
+        margin: .5em;
+    }
+    
+    .model-Boolean-input-Label:after {
+        content: '';
+        position: absolute;
+        top: .25em;
+        left: .25em;
+        width: 1em;
+        height: 1em;
+        background: #fff;
+        border-radius: 1em;
+        transition: 0.3s;
+    }
+    
+    input:checked + .model-Boolean-input-Label {
+        background: $PrimaryColor;
+    }
+    
+    input:checked + .model-Boolean-input-Label:after {
+        left: calc(100% - .25em);
+        transform: translateX(-100%);
+    }
+    
+    .model-Boolean-input-Label:active:after {
+        width: 1.75em;
+    }
+}

@@ -1,0 +1,18 @@
+.model-input.string {
+    &.short, &.date, &.enum, &.long, &.password {
+        min-width: 50%;
+        max-width: 50%;
+    }
+    &.color {
+        width: 100px;
+        max-width: 100px;
+        .Custom-Color-Picker-Sample {
+            width: calc(100% - .5em);
+            border: $borderColor solid 1px;
+        }
+    }
+    &.styled {
+        min-width: 100%;
+        max-width: 100%;
+    }
+}

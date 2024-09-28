@@ -1,0 +1,138 @@
+@import "./List.scss";
+@import "./String.scss";
+@import "./Number.scss";
+@import "./Boolean.scss";
+@import "./Model.scss";
+
+#__Builder-Root {
+    .__Builder-Field > label, .__Builder-Fields-Group-Label > label {
+        height: .25em;
+        transform: translateY(-50%);
+        font-size: .85em;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        text-transform: capitalize;
+        white-space: nowrap;
+        &:focus {
+            outline: none;
+        }
+        &::after {
+            content: "";
+            height: 1px;
+            background: #ddd;
+            flex-grow: 1;
+            margin-left: .5em;
+            min-width: .5em;
+        }
+    }
+    .__Builder-Fields-Group-Label {
+        display: flex;
+        width: 100%;
+        max-height: .25em;
+        &.__Builder-List {
+            max-height: 2.5em;
+            height: 2.5em;
+        }
+        button {
+            position: relative;
+            font-size: 1em;
+            min-height: 1.75em;
+            max-height: 1.75em;
+            transform: translateY(-50%);
+            line-height: 1em;
+            background: #f8f8f8;
+            padding: .3em;
+            align-items: center;
+            border-radius: .25em;
+            border: $BorderColor 1px solid;
+            &.__Builder-Small {
+                font-size: .85em;
+            }
+            &:hover {
+                background: $PrimaryColor;
+                color: #eee;
+            }
+            &:active {
+                transform: translateY(-50%) scale(.95);
+            }
+            &:not(:first-of-type) {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+            &:not(:last-of-type) {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                border-right: 0;
+            }
+        }
+        &::after, &::before {
+            content: "";
+            height: 1px;
+            background: #ddd;
+            flex-grow: 1;
+            min-width: .5em;
+        }
+    }
+    .__Builder-Field {
+        position: relative;
+        margin-top: 1em !important;
+        margin: .5em;
+        font-size: 1em;
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid #ddd;
+        border-top: none;
+        flex-direction: column;
+        input, textarea {
+            border: 1px solid #ddd;
+            border-top: none;
+            padding: .5em;
+            background: #fff;
+            border-radius: .25em;
+            outline: none;
+            width: max-content;
+            flex-grow: 1;
+            border: none;
+            max-width: 100%;
+            border-radius: 0;
+            &:disabled {
+                background: #aaa;
+                cursor: not-allowed;
+            }
+        }
+        select {
+            width: 100%;
+            outline: none;
+            margin: 0;
+            padding: .5em;
+            border: none;
+            max-width: 100%;
+        }
+        &:focus-within {
+            border-color: $PrimaryColor;
+            > .__Builder-Fields-Group-Label {
+                &::after, &::before {
+                    background: $PrimaryColor;
+                }
+                > label::after {
+                    background: $PrimaryColor;
+                }
+            }
+        }
+    }
+    .__Builder-Fields-Group.__Builder-Field {
+            width: calc(100% - 1em);
+    }
+    .__Builder-Fields-Group-List {
+        padding: .25em;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .__Builder-Field-Message {
+        &.__Builder-Error {
+            color: $DangerColor;
+        }
+    }
+}

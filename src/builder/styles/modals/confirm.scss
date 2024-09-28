@@ -1,0 +1,13 @@
+#__Builder-Confirm-Modal {
+    .__Builder-Modal-Body {
+        padding: 1em;
+    }
+}
+
+#__BuilderConfirmModalConfirmBtn {
+    background: $PrimaryColor !important;
+    color: #eee !important;
+    &:hover {
+        background: lighten($PrimaryColor, 5) !important;
+    }
+}

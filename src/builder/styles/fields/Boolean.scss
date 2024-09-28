@@ -1,0 +1,48 @@
+
+#__Builder-Root {
+    .__Builder-Boolean-Field {
+        display: inline-flex !important;
+        input[type=checkbox]{
+            height: 0;
+            width: 0;
+            visibility: hidden;
+        }
+          
+        .__Builder-Boolean-Field-Label {
+            cursor: pointer;
+            text-indent: -9999px;
+            width: 3em;
+            height: 1.5em;
+            background: grey;
+            display: block;
+            border-radius: 1.5em;
+            position: relative;
+            margin: .5em;
+        }
+        
+        .__Builder-Boolean-Field-Label:after {
+            content: '';
+            position: absolute;
+            top: .25em;
+            left: .25em;
+            width: 1em;
+            height: 1em;
+            background: #fff;
+            border-radius: 1em;
+            transition: 0.3s;
+        }
+        
+        input:checked + .__Builder-Boolean-Field-Label {
+            background: $PrimaryColor;
+        }
+        
+        input:checked + .__Builder-Boolean-Field-Label:after {
+            left: calc(100% - .25em);
+            transform: translateX(-100%);
+        }
+        
+        .__Builder-Boolean-Field-Label:active:after {
+            width: 1.75em;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.app-breadcrumps {
+    display: flex;
+    padding: 1em;
+    padding-bottom: 0;
+}
+
+.breadcrumps-left {
+    flex-grow: 1;
+    h1 {
+        color: $textColor1;
+        text-align: left;
+        font-size: 1.75em;
+        margin: 5px;
+        font-weight: 500;
+    }
+}
+
+.breadcrumps-right {
+    display: flex;
+    align-items: center;
+    button {
+        padding: .5em 1em !important;
+        font-weight: normal;
+        .app-icon {
+            margin: 0 .5em 0 0;
+        }
+    }
+}
+
+.breadcrumps-list {
+    margin: .5em;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumps-item {
+    color: $textColor2;
+    &:not(:last-of-type) {
+        cursor: pointer;
+        color: $PrimaryColor;
+        font-weight: 500;
+        &::after {
+            content: "/";
+            margin: .25em;
+            color: #000;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+#__Builder-Map {
+    border-top: $BorderSize $BorderColor solid;
+    display: flex;
+    position: relative;
+    font-size: .9em;
+    overflow: hidden;
+    .__Builder-Map-Item {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        > .__Builder-Map-Chev {
+            border-style: solid;
+            border-color: $BorderColor;
+            border-width: $BorderSize $BorderSize 0px 0px;
+            height: 25px;
+            width: 25px;
+            transform: rotate(45deg) skew(15deg, 15deg) ;
+            background: #fff;
+            position: relative;
+            z-index: 5;
+            margin-left: -10px;
+        }
+        &:hover {
+            .__Builder-Map-Item-Name, .__Builder-Map-Item-Name::after, .__Builder-Map-Item-Name::before, >.__Builder-Map-Chev {
+                background: #f5f5f5;
+            }
+        }
+        &:last-of-type {
+            .__Builder-Map-Item-Name, .__Builder-Map-Item-Name::after, .__Builder-Map-Item-Name::before, >.__Builder-Map-Chev {
+                background: $PrimaryColor;
+            }
+            .__Builder-Map-Item-Name {
+                color: #eee;
+            }
+        }
+    }
+    .__Builder-Map-Item-Name {
+        padding: .75em 1em;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 12.5px;
+            height: 100%;
+            left: 100%;
+            top: 0;
+        }
+        &::before {
+            left: unset;
+            right: 100%;
+        }
+        &:not(:first-of-type) {
+            cursor: pointer;  
+        }
+    }
+
+}

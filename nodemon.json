@@ -1,0 +1,3 @@
+{
+    "ignore": ["interface/", "src/", "node_modules", "models.config.ts", "models", "config/data"]
+  }

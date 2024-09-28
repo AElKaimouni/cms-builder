@@ -1,0 +1,49 @@
+.app-model-table {
+    thead * {
+        font-weight: 500 !important;
+        color: $textColor1;
+    }
+    tbody tr {
+        cursor: pointer;
+        color: $textColor2;
+        white-space: nowrap;
+        &:hover {
+            background: #f3f3f3;
+        }
+    }
+}
+
+.app-model-table-tools {
+    margin: 0 1em;
+    display: flex;
+    align-items: center;
+}
+
+.app-model-table-tools-left {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+.app-model-table-tools-right {
+    display: flex;
+    align-items: flex-end;
+}
+
+.app-model-table-search {
+    input {
+        padding: .5em 1em;
+    }
+}
+
+.app-table-bot-tools {
+    display: flex;
+
+}
+
+.app-table-bot-tools-left {
+    flex-grow: 1;
+}
+.app-table-bot-tools-right, .app-table-bot-tools-left {
+    align-items: center;
+    display: flex;
+}

@@ -1,0 +1,101 @@
+.model-preview {
+    
+    position: relative;
+    &:not(.table) {
+        width: 150px;
+        height: 150px;
+        background: #333;
+        &.video {
+            display: flex;
+            align-items: center;
+        }
+    }
+    &.table {
+        width: 40px;
+        .model-preview-image {
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    video {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    > svg {
+        width: 40%;
+        height: 100%;
+        fill: white;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.model-preview-model, .model-preview-name, .model-preview-message {
+    color: #eee;
+    position: absolute;
+    text-shadow: 2px 2px 10px #000;
+    display: inline-block;
+    margin: 3px;
+    text-transform: capitalize;
+}
+
+.model-preview-message {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #aaa;
+    text-shadow: none;
+    text-transform: none;
+}
+
+.model-preview-model {
+    top: 0;
+    left: 0;
+}
+
+.model-preview-name {
+    bottom: 0;
+    right: 0;
+}
+
+.model-preview-image {
+    object-fit: contain;
+    object-position: center;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.model-preview-checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 3px;
+}
+
+.model-preview-table-name {
+    cursor: pointer;
+    color: $PrimaryColor;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.model-preview-methods {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+}
+
+.model-preview-method-item {
+    margin: .25em;
+}

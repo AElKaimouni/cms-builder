@@ -1,0 +1,131 @@
+$LayersPush: .65vw;
+
+#__Builder-Layers {
+    overflow-y: auto;
+    min-height: 100%;
+}
+
+.__Builder-Layers-List {
+    &.__Builder-Graped .__Builder-Layer-Methods {
+        display: none;
+    }
+}
+
+.__Builder-Layer {
+    &.__Builder-Graped {
+        z-index: 999999;
+        pointer-events: none;
+        opacity: .75;
+        position: absolute;
+        background-color: #eee;
+    }
+    &.__Builder-Top-Target {
+        border-top: $GrapColor 1px solid;
+    }
+    &.__Builder-Bottom-Target {
+        border-bottom: $GrapColor 1px solid;
+    }
+    &.__Builder-Selected > .__Builder-Layer-Card {
+        background: $PrimaryColor;
+        .__Builder-Layer-Name {
+            span:not(.__Builder-Layer-Symbol) {
+                color: #eee;
+                
+            }
+            svg {
+                fill: #333 !important;
+            }
+        }
+        .__Builder-Layer-Symbol {
+            background: $PrimaryColor;
+        }
+    }
+}
+
+.__Builder-Layer-Card {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    border-bottom: $BorderColor $BorderSize solid;
+    &:hover {
+        background: #f7f7ff;
+        .__Builder-Layer-Methods {
+            opacity: 1;
+        }
+    }
+}
+
+.__Builder-Layer-Symbol {
+    position: absolute;
+    left: 1.2em;
+    bottom: .5em;
+    font-weight: bold;
+    font-size: .75em;
+    background: #fff;
+    letter-spacing: 0;
+    padding: 0 !important;
+    color: #666;
+}
+
+.__Builder-Layer-Name {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    padding: .5em;
+    position: relative;
+    span:not(.__Builder-Layer-Symbol) {
+        padding: .25em;
+        color: #333;
+        &:focus-within {
+            outline: #ddd solid 1px;
+        }
+    }
+    svg {
+        margin: 0 .125em;
+        margin-bottom: .125em;
+        fill: #666
+    }
+}
+
+.__Builder-Layer-Toggler {
+    margin: .25em;
+    width: .75em;
+    margin-left: calc($LayersPush - 0.2em);
+    svg {
+        width: .75em;
+        height: .75em;
+    }
+}
+
+.__Builder-Layer-Childs {
+    display: none;
+    max-width: calc(100% - $LayersPush);
+    border-left: 1px solid #ddd;
+    margin-left: $LayersPush;
+    padding-left: calc(1vw - $LayersPush);
+    &.__Builder-Active {
+        display: block;
+    }
+}
+
+.__Builder-Layer-Methods {
+    display: flex;
+    opacity: 0;
+    button {
+        font-size: .9em;
+        background: #f8f8f8 !important;
+        padding: .25em !important;
+        display: flex !important;
+        align-items: center !important;
+        box-shadow: 0px 0px 10px -6px !important;
+        margin: 0 .25em !important;
+        border-radius: .25em !important;
+        svg {
+            margin: 0;
+            height: 1em;
+            width: 1em;
+            display: inline-block;
+        }
+    }
+}

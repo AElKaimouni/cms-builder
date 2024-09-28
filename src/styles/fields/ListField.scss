@@ -1,0 +1,50 @@
+.model-input.list {
+    padding-top: 1em;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    > .model-fields-group {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        border: none;
+        max-width: calc(100% - 1em);
+        flex-grow: 1;
+    }
+}
+
+.list-field-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+        display: inline-flex;
+        align-items: center;
+        background-color: $borderColor !important;
+        border-radius: 50%;
+        svg {
+            fill: $textColor3 !important;
+            width: 1.5em;
+            height: 1.5em;
+        }
+    }
+    span {
+        color: $textColor3;
+        opacity: 0;
+    }
+    &:hover {
+        span {
+            opacity: 1;
+            color: $PrimaryColor;
+            font-weight: 500;
+        }
+        button {
+            background-color: lighten($PrimaryColor, 42) !important;
+            svg {
+                fill: $PrimaryColor !important
+            }
+        }
+    }
+}

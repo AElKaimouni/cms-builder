@@ -1,0 +1,41 @@
+#app-layout {
+    min-width: 100vw;
+    min-height: 100vh;
+    &.form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #eee;
+    }
+    &.default {
+        display: flex;
+        flex-direction: column;
+    }
+    &.error {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 2em;
+        color: $DangerColor;
+    }
+}
+
+#app-down {
+    display: flex;
+    flex-grow: 1;
+    height: 0;
+}
+
+#app-from-container {
+    padding: 1em;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+#app-container {
+    max-height: 100%;
+    overflow-y: auto;
+    flex-grow: 1;
+    background: #e9edf3;
+}

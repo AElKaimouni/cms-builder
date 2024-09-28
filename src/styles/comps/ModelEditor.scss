@@ -1,0 +1,152 @@
+.model-props {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 1em;
+    &::before {
+        content: "";
+        width: 1px;
+        height: calc(100% - 3em);
+        left: 1.5em;
+        background: #aaa;
+        bottom: 1.5em;
+        position: absolute;
+    }
+}
+
+.model-props-header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.model-props-name {
+    flex-grow: 1;
+    margin: 0 .5em;
+}
+
+.model-props-body {
+    margin: 0 2em;
+    .model-props {
+        border: 1px solid #aaa;
+        &::after {
+            content: "";
+            width: 1.5em;
+            height: 1px;
+            position: absolute;
+            left: -1.5em;
+            top: 1.25em;
+            background: #aaa;
+        }
+    }
+}
+
+.model-field {
+    padding: .5em;
+    margin: .5em;
+    display: flex;
+    align-items: center;
+    border: 1px solid #aaa;
+    position: relative;
+    &::before {
+        content: "";
+        width: 2em;
+        height: 1px;
+        position: absolute;
+        left: -2em;
+        top: calc(50% - .5px);
+        background: #aaa;
+    }
+    &:hover {
+        background: #f5f5f5;
+        cursor: pointer;
+    }
+    > .model-field-type {
+        min-width: 150px;
+    }
+}
+
+.model-field-type {
+    .app-tag {
+        background: $PrimaryColor;
+        color: #eee;
+        padding: .25em .5em;
+        border-radius: .25em;
+        text-transform: capitalize;
+        margin: 0 .5em;
+        border-bottom-left-radius: 0;
+        display: inline-block;
+    }
+}
+
+.model-field-args {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.model-field-name {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    text-transform: capitalize;
+}
+
+.model-field-tools {
+    button {
+        margin: 0;
+    }
+}
+
+.model-props-tools {
+    display: flex;
+}
+
+.add-field-templates-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.add-field-template-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    background: #f8f8f8;
+    margin: 1em;
+    border-radius: .5em;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+    .app-icon {
+        margin: 1em;
+    }
+    &:hover {
+        background: #fff;
+    }
+}
+
+.model-editor-form-types {
+    display: flex;
+    align-items: center;
+}
+
+.model-editor-types-list {
+    display: flex;
+}
+
+.model-editor-type-item {
+    margin: .5em;
+    padding: .5em;
+    border-radius: .25em;
+    text-transform: capitalize;
+    border: #aaa 1px solid;
+    cursor: pointer;
+    &.active {
+        background: $PrimaryColor;
+        color: #eee;
+        border: none;
+    }
+}

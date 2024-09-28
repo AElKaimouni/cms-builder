@@ -1,0 +1,21 @@
+#app-models {
+    display: flex;
+}
+
+#app-model {
+    flex-grow: 1;
+}
+
+.models-list-item {
+    padding: .5em 1em;
+    min-width: 200px;
+    cursor: pointer;
+    text-transform: capitalize;
+    &:hover {
+        background: lighten($PrimaryColor, 45);
+    }
+    &.active {
+        background: $PrimaryColor;
+        color: #eee;
+    }
+}

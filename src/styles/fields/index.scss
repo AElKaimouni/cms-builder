@@ -1,0 +1,119 @@
+@import "./BooleanField.scss";
+@import "./ListField.scss";
+@import "./ModelField.scss";
+@import "./NumberField.scss";
+@import "./StringField.scss";
+
+.model-input {
+    position: relative;
+    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 1em;
+    input, textarea, select {
+        width: 100%;
+        max-width: 100%;
+        padding: 8px;
+        border: 1px solid $borderColor;
+        outline: none;
+        &:focus {
+            border-color: $PrimaryColor;
+        }
+    }
+    &.errored-model-input {
+        input, textarea, select {
+            border-color: $DangerColor;
+        }
+    }
+}
+
+.model-input-label {
+    text-transform: capitalize;
+    margin-bottom: .5em;
+    color: $textColor1;
+}
+
+.model-fields-group-label {
+    text-transform: capitalize;
+    margin: 1em 0;
+}
+
+.model-fields-group-list {
+    padding: 1em;
+    background: rgba(0,0,0, .025);
+}
+
+.field-input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.field-input-prefix {
+    padding: 8px 16px;
+    border: 1px solid $borderColor;
+    border-right: 0;
+    background-color: #f5f5f5;
+    color: #666;
+    font-style: italic;
+}
+
+.field-input-password-switch {
+    position: absolute;
+    right: .5em;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    svg {
+        fill: #555
+    }
+}
+
+.model-method-button {
+    padding: 8px !important;
+    border: 1px solid $borderColor;
+    border-right: 0;
+    background-color: #f5f5f5;
+    color: #666;
+    margin: 0;
+    border-radius: 0;
+    border-left: 0;
+    line-height: 1em;
+    display: inline-block !important;
+    svg {
+        height: 1em;
+    }
+}
+
+.model-input-error {
+    margin-left: 1em;
+    color: $DangerColor;
+    font-size: .75em;
+}
+
+.field-input-loader {
+    display: inline;
+    width: 0;
+    > span {
+        position: relative;
+        transform: translateX(-100%);
+        box-sizing: content-box;
+        display: inline-block;
+    }
+    svg {
+        width: 1.25em;
+        height: 1.25em;
+        padding: 0 .5em;
+        margin-top: .25em;
+        fill: $SuccessColor;
+    }
+    &.danger svg {
+        fill: $DangerColor;
+    }
+    .app-loader {
+        margin-top: .25em;
+        margin-right: .5em;
+    }
+}

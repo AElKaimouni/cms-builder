@@ -1,0 +1,40 @@
+.app-dropmenu {
+    position: relative;
+    display: inline-block;
+    > button {
+        margin: 0;
+        margin-bottom: .25em;
+        border: $borderColor solid 1px;
+    }
+}
+
+.app-menu {
+    border: $borderColor 1px solid;
+    box-shadow: 1px 1px 5px -3px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    border-radius: 3px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.app-menu-item {
+    min-width: 150px;
+    padding: 10px;
+    text-align: left;
+    background: #fff;
+    cursor: pointer;
+    &:hover {
+        background-color: #f0f5f8;
+    }
+    &.disabled {
+        background: #ccc;
+        color: #aaa;
+        cursor: not-allowed;
+    }
+}
+
+.dropdown-line {
+    border-bottom: 1px solid #ccc;
+}

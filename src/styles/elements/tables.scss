@@ -1,0 +1,31 @@
+.app-table {
+    width: 100%;
+    vertical-align: middle;
+    border-spacing: 0;
+    border-collapse: collapse;
+    thead {
+        border-bottom: $borderColor 1px solid;
+        th {
+            font-weight: normal;
+            text-transform: capitalize;
+        }
+    }
+    tr {
+        th, td {
+            padding: 1em;
+            text-align: center;
+        }
+        &:not(:last-of-type) {
+            border-bottom: $borderColor 1px solid;
+        }
+    }
+    .model-preview  {
+        display: inline-block;
+        
+    }
+    .Custom-Color-Picker-Sample {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+    }
+}

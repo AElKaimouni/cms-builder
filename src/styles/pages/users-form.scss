@@ -1,0 +1,31 @@
+.user-form {
+    .edit-model-info-item {
+        align-items: center;
+    }
+    .user-role-input {
+        border: 1px solid #aaa;
+        text-transform: capitalize;
+    }
+    .user-from-perms-table {
+        width: 100%;
+        text-transform: capitalize;
+        vertical-align: middle;
+        border-spacing: 0;
+        border-collapse: collapse;
+        text-align: center;
+        tr.line-row td {
+            border-top: 1px solid #aaa;
+        }
+        td, th {
+            padding: 1em;
+            margin: 0;
+        }
+        thead tr th {
+            border-bottom: 1px solid #aaa;
+        }
+        tr > td:first-of-type, tr > th:first-of-type {
+            border-right: 1px solid #aaa;
+            text-align: left;
+        }
+    }
+}

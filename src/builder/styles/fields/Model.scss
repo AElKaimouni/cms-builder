@@ -1,0 +1,21 @@
+#__Builder-Root {
+    .__Builder-Model-Field {
+        display: flex !important;
+        width: 100%;
+    }
+    .__Builder-Model-Methods {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        button {
+            margin: .125em;
+        }
+    }
+    .model-preview {
+        width: 100%;
+        background: #1b1b1b;
+        span {
+            margin: 1vw;
+        }
+    }
+}

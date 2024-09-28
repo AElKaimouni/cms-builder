@@ -1,0 +1,14 @@
+#__Builder-Root {
+    .__Builder-Number-Field {
+        max-width: calc(50% - 1em);
+        &.__Builder-slider {
+            max-width: unset;
+            >div {
+                margin: .25em .5em;;
+            }
+            span {
+                margin-right: .5em;
+            }
+        }
+    }
+}

@@ -1,0 +1,104 @@
+#upload-modal {
+    .Modal-Footer {
+        display: flex;
+        justify-content: flex-end;
+        button {
+            font-size: 1em;
+            margin: .25em;
+        }
+    }
+    > .Modal-Container{
+        min-width: 40vw;
+        min-height: 40vh;
+    }
+    .Upload-Modal-Menu {
+        display: flex;
+        > div {
+            flex-grow: 1;
+            text-align: center;
+            padding: 1em;
+            background: #e5e5e5;
+            border-bottom: $BorderColor $BorderSize solid;
+            cursor: pointer;
+            &:first-of-type {
+                border-right: $BorderColor $BorderSize solid;
+            }
+            &.Active {
+                background: #f0f0f0;
+                border-bottom: none;
+            }
+        }
+    }
+    .Upload-Modal-Content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        > div {
+            flex-grow: 1;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+    .Upload-Modal-DropZone {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        cursor: pointer;
+        flex-direction: column;
+        > div {
+            width: 100%;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        svg {
+            width: 3em;
+            height: 3em;
+        }
+        h4 {
+            margin: 0;
+        }
+    }
+    .Modal-Body {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    .Upload-Modal-Link-Content {
+        padding: 1em;
+    }
+    .Upload-Modal-List {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-gap: 1rem;
+        padding: 1em;
+        width: 100%;
+    }
+    .upload-modal-preview-item {
+        margin: .5em;
+        margin-bottom: 3em;
+    }
+    .Upload-Modal-Header {
+        display: flex;
+        padding: 1em;
+        align-content: center;
+        > div:first-of-type {
+            flex-grow: 1;
+            margin: 0;
+        }
+        > div {
+            display: flex;
+            align-items: center;
+        }
+        button {
+            padding: .5em 1em !important;
+            font-size: 1em;
+        }
+    }
+}

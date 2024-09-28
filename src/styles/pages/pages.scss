@@ -1,0 +1,11 @@
+.page-locales-table {
+    tr {
+        cursor: pointer;
+        &:hover {
+            background: #f5f5f5;
+        }
+        &.active {
+            background: lighten($PrimaryColor, 40);
+        }
+    }
+}

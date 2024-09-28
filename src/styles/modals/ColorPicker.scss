@@ -1,0 +1,19 @@
+.Custom-Color-Picker {
+    position: relative;
+    width: 100%;
+}
+
+.Custom-Color-Picker-Sample {
+    width: 5em;
+    height: 2em;
+    margin: .5em .25em .25em;
+}
+
+#Custom-Color-Picker-Cnt {
+    position: absolute;
+    z-index: 99999999;
+    background: #fff;
+    padding: .5em;
+    border-radius: .5em;
+    box-shadow: 0 0 .5em -.125em;
+}

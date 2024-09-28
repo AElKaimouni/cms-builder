@@ -1,0 +1,39 @@
+.__Builder-Media-Card {
+    margin: .5em;
+    position: relative;
+    .__Builder-Media-Card-Img-Cnt {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 12em;
+        height: 12em;
+        background: #222;
+    }
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .__Builder-Media-Card-Checkbox {
+        position: absolute;
+        top: 1em;
+        left: 1em;
+    }
+    .__Builder-Media-Card-Buttons {
+        position: absolute;
+        top: .5em;
+        right: .5em;
+        z-index: 2;
+        button {
+            margin: .25em;
+        }
+    }
+    .__Builder-Media-Card-Delete-btn {
+        background: $DangerColor !important;
+        color: #eee !important;
+    }
+    .__Builder-Media-Card-edit-btn {
+        background: $PrimaryColor !important;
+        color: #eee !important;
+    }
+}

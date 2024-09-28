@@ -1,0 +1,60 @@
+.app-edit-model {
+    display: flex;
+    > div {
+        
+        &:first-of-type {
+            max-width: 72%;
+            min-width: 72%;
+        }
+        &:last-of-type {
+            flex-grow: 1;
+            max-width: 28%;
+            min-width: 28%;
+            > .page-panel {
+                margin-left: 0;
+                &:not(:first-of-type) {
+                    padding: .5em;
+                }
+            }
+            .model-input {
+                width: 100%;
+                max-width: 100%;
+            }
+            .Model-Fields-Group-List {
+                justify-content: center;
+            }
+        }
+    }
+}
+.edit-model-info {
+    h4 {
+        color: $textColor1;
+    }
+    select {
+        display: block;
+        border: 1px solid $borderColor;
+        width: calc(100% - 1em);
+    }
+}
+
+.edit-model-info-item {
+    display: flex;
+    margin: 1.5em 1em;
+    span {
+        flex-grow: 1;
+        color: $textColor3;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: .9em;
+    }
+    p {
+        color: $textColor2;
+        margin: 0;
+    }
+}
+
+.app-edit-model-breadcrumbs {
+    button {
+        padding: .5em 2em !important;
+    }
+}

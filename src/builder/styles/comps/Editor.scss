@@ -1,0 +1,41 @@
+#__Builder-Root {
+    .__Builder-Editor {
+        max-width: 100%;
+    }
+    .__Builder-Editor-Tools {
+        padding-top: .5em;
+        border: 1px solid #ddd;
+        border-top: none;
+        border-bottom: none;
+        display: flex;
+        user-select: none;
+        flex-wrap: wrap;
+        align-items: center;
+        background: #f7f7f7;
+        * {
+            user-select: none !important;
+        }
+    }
+    .__Builder-Editor-Tools button {
+        line-height: 1.25em;
+        max-height: 1.75em;
+        width: 1.75em;
+        font-size: 1em;
+        padding: 0.25em;
+        margin: .25em;
+        background: #fff;
+        &:hover {
+            background: lighten($PrimaryColor, 20);
+        }
+        &.active {
+            background: lighten($PrimaryColor, 15   );
+        }
+    }
+    .__Builder-Editor-Root {
+        min-height: 3em;
+        outline: none;
+        border: 1px solid #ddd;
+        max-width: 100%;
+        padding: .5em;
+    }
+}

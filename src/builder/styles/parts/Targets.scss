@@ -1,0 +1,60 @@
+#__Builder-Targets-Page-Group {
+    .__Builder-Fields-Group-Label {
+        button {
+            margin: 0;
+
+        }
+    }
+}
+
+#__Builder-Targets-Modal {
+    .__Builder-Modal-Body {
+        padding: 1em;
+    }
+    .__Builder-Modal-Footer {
+        justify-content: flex-end;
+        button {
+            margin: .25em;
+            &:last-of-type {
+                background: $PrimaryColor;
+                color: #eee;
+            }
+        }
+    }
+}
+
+#__Builder-Targets {
+    border: $BorderSize solid $BorderColor;
+    border-top: none;
+    min-width: 320px;
+    background: #f7f7f7;
+    .__Builder-Fields-Group {
+        margin: .5em !important;
+        width: calc(100% - 1em);
+    }
+    .__Builder-Targets-Device {
+        display: flex;
+        align-items: center;
+        margin: .5em;
+        background: #fff;
+        padding: .5em;
+        width: 100%;
+        border: 1px solid $BorderColor;
+        input {
+            max-width: 2em;
+        }
+        svg {
+            width: 2em;
+            height: 2em;
+            border-radius: 50%;
+            background: $PrimaryColor;
+            fill: #eee;
+            margin: 0 .5em;
+            padding: .5em;
+        }
+    }
+    .__Builder-Targets-Device-Info {
+        font-size: .75em;
+        flex-grow: 1;
+    }
+}

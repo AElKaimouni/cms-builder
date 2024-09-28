@@ -1,0 +1,84 @@
+.__Builder-FullScreen-Tools {
+    position: fixed;
+    padding: 1em;
+    z-index: 101;
+    transition: transform .125s ease;
+    &::before {
+        content: "";
+        width: 5vw;
+        height: 5vh;
+        position: fixed;
+        transition: all .125s ease !important;
+    }
+    &.__Builder-Bottom-Left {
+        left: 0;
+        bottom: 0;
+        transform: translate(-100%, 100%);
+        &::before {
+            bottom: 100%;
+            left: 100%;
+        }
+    }
+    &.__Builder-Bottom-Right {
+        right: 0;
+        bottom: 0;
+        transform: translate(100%, 100%);
+        &::before {
+            right: 100%;
+            bottom: 100%;
+            transform-origin: right bottom !important;
+        }
+    }
+    &.__Builder-Top-Left {
+        top: 0;
+        left: 0;
+        transform: translate(-100%, -100%);
+        &::before {
+            top: 100%;
+            left: 100%;
+        }
+    }
+    .__Builder-Header-Icon {
+        background: #eee !important;
+        &:hover {
+            background: $PrimaryColor !important;
+            svg {
+                fill: #eee;
+            }
+        }
+    }
+    &:hover {
+        transform: translate(0,0) !important;
+        &::before {
+            width: 100% !important;
+            height: 100% !important;
+        }
+        &.__Builder-Bottom-Left::before {
+            left: 0 !important;
+            bottom: 0 !important;
+        }
+        &.__Builder-Top-Left::before {
+            left: 0 !important;
+            top: 0 !important;
+        }
+        &.__Builder-Bottom-Right::before {
+            bottom: 0 !important;
+            right: 0 !important;
+        }
+    }
+    .__Builder-Menu-Device-Btn {
+        background: #eee;
+        &.__Builder_Active {
+            background: $PrimaryColor !important;
+        }
+    }
+    .__Builder-Menu-Tol {
+        border-radius: 50% !important;
+        font-size: 1.25em;
+    }
+    .__Builder-Header-Icon, .__Builder-Menu-Device-Btn, .__Builder-Menu-Tol {
+        box-shadow: 0 0 1em -.3em;
+        z-index: 10;
+        position: relative;
+    }
+}

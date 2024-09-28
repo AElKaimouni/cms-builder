@@ -1,0 +1,72 @@
+#__Builder-Root {
+    .__Builder-String-Field {
+        &.__Builder-short {
+            display: flex !important;
+            width: calc(100% - 1em);
+            input {
+                width: 100%;
+            }
+        }
+        &.__Builder-long {
+            display: flex !important;
+            width: calc(100% - 1em);
+            textarea {
+                width: 100%;
+                resize: none;
+                overflow: hidden;
+                height: auto;
+            }
+        }
+        &.__Builder-color {
+            input {
+                padding: 0;
+                padding-top: .5em;
+                min-width:  5em !important;
+                height: 2.5em;
+            }
+        }
+        &.__Builder-enum {
+
+        }
+        &.__Builder-styled {
+            display: flex !important;
+            max-width: calc(100% - 1em);
+            .rdw-editor-main {
+                height: unset;
+            }
+            .text-editor-toolbar {
+                font-size: .9em;
+                .rdw-option-wrapper {
+                    max-width: 20px;
+                    min-width: 20px;
+                    max-height: 20px;
+                    margin-right: 2px;
+                    padding: 2px;
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.__Builder-Custom-Color-Picker {
+    position: relative;
+}
+
+.__Builder-Custom-Color-Picker-Sample {
+    width: 5em;
+    height: 2em;
+    margin: .5em .25em .25em;
+}
+
+#__Builder-Custom-Color-Picker-Cnt {
+    position: absolute;
+    z-index: 99999999;
+    background: #fff;
+    padding: .5em;
+    border-radius: .5em;
+    box-shadow: 0 0 .5em -.125em;
+}

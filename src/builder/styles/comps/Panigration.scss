@@ -1,0 +1,28 @@
+#__Builder-Root {
+   .__Builder-Panigration {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    > li {
+        margin: .25em;
+        color: #111;
+        background: #eee;
+        cursor: pointer;
+        border-radius: 50%;
+        height: 2em;
+        width: 2em;
+        line-height: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            color: #333;
+            background: #ddd;
+        }
+        &.active {
+            color: #eee;
+            background: $PrimaryColor;
+        }
+    }
+   } 
+}
